@@ -1,0 +1,14 @@
+>>> import camelot
+>>> tables = camelot.read_pdf('C:/Users/bhaskar_fc/Desktop/Data Science/Namo/Data Science Assignment/Sample_Form20')
+>>> tables
+>>> tables.export('Sample_Form20.csv', f='csv', compress=True) # json, excel, html, sqlite
+>>> tables[0]
+>>> tables[0].parsing_report
+{
+    'accuracy': 99.02,
+    'whitespace': 12.24,
+    'order': 1,
+    'page': 1
+}
+>>> tables[0].to_csv('Sample_Form20.csv') # to_json, to_excel, to_html, to_sqlite
+>>> tables[0].df
